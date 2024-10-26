@@ -33,8 +33,8 @@ const Car = () => {
         Alert.alert("Peringatan", "Temperatur motor melebihi 70°C!");
       }
 
-      if (newBatteryTemp > 70) {
-        Alert.alert("Peringatan", "Temperatur baterai melebihi 70°C!");
+      if (newBatteryTemp > 50) {
+        Alert.alert("Peringatan", "Temperatur baterai melebihi 50°C!");
       }
     });
   }, [db]);
@@ -94,21 +94,21 @@ const Car = () => {
           <Svg height="200" width="200" viewBox="0 0 200 100">
             {/* Busur Hijau (0-30) */}
             <Path
-              d={createArc(100, 100, 80, 180, 120)} // Busur dari 180 ke 120 derajat
+              d={createArc(100, 100, 80, 180, 90)} // Busur dari 180 ke 120 derajat
               stroke="#00FF00"
               strokeWidth="15"
               fill="none"
             />
-            {/* Busur Kuning (30-70) */}
+            {/* Busur Kuning (30-70)
             <Path
               d={createArc(100, 100, 80, 120, 60)} // Busur dari 120 ke 60 derajat
               stroke="#FFFF00"
               strokeWidth="15"
               fill="none"
-            />
+            />*/}
             {/* Busur Merah (70-100) */}
             <Path
-              d={createArc(100, 100, 80, 60, 0)} // Busur dari 60 ke 0 derajat
+              d={createArc(100, 100, 80, 90, 0)} // Busur dari 60 ke 0 derajat
               stroke="#FF0000"
               strokeWidth="15"
               fill="none"
